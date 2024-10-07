@@ -1,0 +1,140 @@
+.partner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.125rem;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    width: 100%;
+    /* background-color: blue; */
+}
+
+.partner-text {
+    max-width: 50%;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2em;
+    margin-bottom: 1.25rem;
+    transition: all 0.3s ease; /* Add a transition for smooth hover effects */
+}
+
+h2:hover {
+    text-decoration: underline;  /* Underlines text on hover */
+    color: rgba(83, 195, 81, 1); /* Changes color on hover */
+    /* font-style: italic;  Italic font style on hover */
+    /* font-family: 'Helvetica Neue LT Pro' ; */
+   font-family: ' Afacad Flux", sans-serif';
+}
+
+.partner-point {
+    display: flex;
+    align-items: flex-start; /* Aligns the icon and text to the top */
+    margin-bottom: 1.25rem;
+}
+
+.point-icon {
+    font-size: 2.5em;  /* Makes the icon a bit larger */
+    margin-right: 1rem;
+    color: green;
+    margin-top: 0.312rem; /* Adds some space to vertically center the icon better */
+}
+
+.point-text {
+    /* display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;  */
+}
+
+.point-text h3 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    margin: 0;
+    color: rgba(83, 195, 81, 1);
+}
+
+.point-text p {
+    margin: 0.312rem 0 0;
+    color: #555;
+    width: 80%;
+    /* text-indent: -15px;  */
+    /* padding-left: -50px;   */
+    line-height: 1.6; 
+    text-align: left;
+}
+
+.partner-image {
+    max-width: 45%;
+}
+
+.globe-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.globe-img:hover {
+    transform: scale(1.05);  /* Scale the image on hover for a subtle effect */
+}
+
+.partner-container:hover .partner-text {
+    transform: translateX(2.5rem);
+    transition: all 0.3s ease;
+}
+
+.partner-container:hover .partner-image {
+    transform: translateX(-2.5rem);
+    transition: all 0.3s ease;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .partner-container {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partner-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .partner-image {
+        max-width: 80%;
+        margin-top: 1.5rem;
+    }
+
+    .point-text p {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .point-icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .point-icon {
+        font-size: 1.5rem;
+    }
+
+    .point-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .point-text p {
+        font-size: 1rem;
+    }
+}

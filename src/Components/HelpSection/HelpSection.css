@@ -1,0 +1,159 @@
+.help-section {
+  padding: 2.5rem;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.help-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.help-cards {
+  display: flex;
+  justify-content:space-evenly;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  gap: 1.25rem;
+
+}
+
+.help-card {
+  flex: 1;
+  background-color: #f0f9f4;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* .help-card:hover { */
+/* transform: translateY(-10px); */
+/* transform: scale(1.1); */
+/* } */
+
+/* .hexagon {
+  background-color: #e0f7eb;
+  padding: 30px;
+  transition: background-color 0.3s ease;
+} */
+
+
+.hexagon {
+    width: 9.375rem;
+    height: 9.375rem;
+    background-color: #e0faf4;
+   
+
+    margin: 0 auto 1.25rem;
+    clip-path: polygon(
+      25% 6.7%,
+      75% 6.7%,
+      100% 50%,
+      75% 93.3%,
+      25% 93.3%,
+      0% 50%  
+    );
+    transform: rotate(30deg);
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .hexagon img {
+    width: 9rem;
+    height: 8rem;
+    margin-top: 1.25rem;
+    transform: rotate(-30deg);
+   
+  }
+  
+
+.hexagon:hover {
+  background-color: rgb(190, 233, 223); /* Darken hexagon on hover */
+  /* transform: scale(1.2); */
+  transform: rotate(30deg)scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.help-card:hover{
+  transform: translateX(5px) translateY(5px) scale(1.1);
+  /* transform: scale(1.3); */
+  transition: transform 0.3s ease;
+}
+
+
+.help-card h3,
+.help-card p {
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  text-decoration: underline;  /* Underlines text on hover */
+  color: rgba(83, 195, 81, 1); /* Changes color on hover */
+  /* font-style: italic;  Italic font style on hover */
+  /* font-family: 'Helvetica Neue LT Pro' ; */
+ /* font-family: ' Afacad Flux", sans-serif'; */
+}
+
+.hexagon:hover ~ h3,
+.hexagon:hover ~ p {
+  transform: translateX(15px) translateY(10px); /* Shift text downward */
+}
+
+
+.help-card h3 {
+  color: rgba(69, 181, 83, 1);
+
+  /* color: #3A9C54; */
+  margin-bottom: 10px;
+  font-family: Helvetica Neue LT Pro;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.055em;
+  text-align: center;
+}
+
+.help-card p {
+  color: rgba(80, 80, 80, 1);
+
+  font-family: Helvetica Neue LT Pro;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 21.6px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .help-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .help-card {
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .help-title {
+    font-size: 1.75rem;
+  }
+
+  .help-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .help-card p {
+    font-size: 1rem;
+  }
+
+  .hexagon {
+    width: 8rem; /* Adjusted for smaller screens */
+    height: 8rem; /* Adjusted for smaller screens */
+  }
+}
+

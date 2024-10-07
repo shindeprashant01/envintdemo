@@ -1,0 +1,164 @@
+.above-footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 40px; */
+    background-color: #f8f8f8;
+    border-radius: 1.25rem;
+    text-align: center;
+    width: 100%;
+}
+
+.above-footer-container p{
+    font-size: larger;
+}
+.above-footer-container h2{
+    font-size: 2rem;
+}
+
+.below-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.above-footer-image {
+    max-width: 100%;
+    border-radius: 1.25rem;
+}
+
+.above-footer-right {
+    flex: 1;
+    margin-left: 1.25rem;
+    background-image: url(../assets/img/background.png);
+    background-size: 120% 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 8rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-radius: 1.25rem;
+    margin-bottom: 3rem;
+   
+
+}
+
+.above-footer-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    margin-top: 2rem;
+}
+
+.half-width-inputs {
+    display: flex;
+    /* gap: 15px; */
+}
+.half-width-inputs1 {
+    display: flex;
+    gap: 1rem;
+}
+
+.half-width-inputs input {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.625rem;
+}
+
+.above-footer-form input,
+.above-footer-form textarea {
+    width: 95%;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 6.25rem;
+}
+
+.send-message-btn {
+    height: 3.125rem;
+    background-color: #32cd32;
+    color: rgba(0, 0, 0, 1);;
+    padding-left: 0.5rem;
+    /* padding: 2px; */
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 7.625rem;
+    margin-left: 1rem;
+    font-family: Helvetica Light;
+  
+}
+
+.send-message-btn:hover {
+    width: 11.25rem;
+    color: #e5f7ef;
+    font-size: 1.125rem;
+}
+
+
+  
+  .send-message-btn::after {
+    content: '→';
+    margin-left: 0.625rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+  }
+  
+  .send-message-btn:hover::after {
+    opacity: 1;
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .below-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .above-footer-right {
+        margin-left: 0;
+        padding: 2rem;
+    }
+
+    .half-width-inputs1 {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .above-footer-container h2 {
+        font-size: 1.5rem; /* Smaller for mobile */
+    }
+
+    .above-footer-container p {
+        font-size: 1rem;
+    }
+
+    .above-footer-right {
+        padding: 1.5rem;
+    }
+
+    .send-message-btn {
+        font-size: 0.875rem; /* Adjust button font size */
+    }
+}
+
