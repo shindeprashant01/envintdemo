@@ -1,21 +1,33 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Container for the "And go for better" section */
 .better-container {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
+  justify-content: center; /* Vertically center the content */
+  align-items: center;     /* Horizontally center the content */
+  height: 100vh;           /* Full viewport height for vertical centering */
   width: 100%;
-  
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
+/* Stats container */
 .better-stats {
-  display: flex;
+  display: flex; 
   justify-content: center;
   gap: 2rem;
   margin-top: 1.25rem;
 }
 
+/* Individual stat item */
 .stat-item {
   text-align: center;
   flex-direction: column;
@@ -26,18 +38,20 @@
   transition: background-color 0.3s ease;
 }
 
+/* Hover effect */
 .stat-item:hover {
-  background-color:#D2F9F2; 
+  background-color: #D2F9F2; 
 }
-
 
 .stat-item:hover p {
   color: rgb(12, 12, 12); 
 }
-.stat-item:hover h3{
+
+.stat-item:hover h3 {
   color: rgb(129, 129, 206);
 }
 
+/* Icon inside each stat item */
 .stat-icon {
   width: 13rem;
   height: 13rem;
@@ -45,6 +59,7 @@
   justify-content: center;
 }
 
+/* Headings */
 h2 {
   font-size: 1.75rem;
   font-weight: bold;
@@ -56,15 +71,19 @@ h3 {
   font-weight: bold;
 }
 
+/* Paragraph text */
 p {
   color: gray;
   font-size: 1.3rem;
 }
 
-
- /* media query */
-
+/* Responsive design for tablets */
 @media (max-width: 768px) {
+  .better-container {
+    height: auto; /* Auto height for smaller screens */
+    padding: 2rem 1rem; /* Padding for smaller screens */
+  }
+
   .better-stats {
     flex-direction: column;
     gap: 1.25rem; /* Reduced gap */
@@ -93,7 +112,22 @@ p {
   }
 }
 
+/* Responsive design for mobile devices */
 @media (max-width: 480px) {
+  .better-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem; /* Additional padding for very small screens */
+    height: auto; /* Allow auto height */
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .better-stats {
+    gap: 1rem; /* Reduced gap */
+  }
+
   .stat-item {
     padding: 0.875rem; /* Further reduced padding */
   }

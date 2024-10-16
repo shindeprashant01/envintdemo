@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useRef,useEffect } from 'react';
 import './Footer.css'; // Import the CSS for the footer
 import envintlogo from '../assets/img/envintLogo.png'
 import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import { LocationOnSharp } from '@mui/icons-material';
 
 const Footer = () => {
+
+    const scrollRef =useRef(null);
+    
+    useEffect(() => {
+        if (scrollRef.current) {
+          scrollRef.current.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }
+      }, []); 
+
+   
   return (
-    <footer className="footer">
+    <footer className="footer"  ref={scrollRef}>
       <div className="footer-content">
         <div className='footer-content-1'>
         <img 
@@ -20,7 +32,7 @@ const Footer = () => {
         <div className='footer-content-2'>
         <div className="footer-info">
           <h2>Get in touch</h2>
-          <p><spaan><LocationOnSharp/></spaan>
+          <p><span><LocationOnSharp/></span>
             91 Springboard, Godrej & Boyce, LBS Marg, Vikhroli West, Mumbai 400079</p>       
              <a href="https://goo.gl/maps/XXXXXX" target="_blank" rel="noopener noreferrer">View Map</a>
           <p>Email: <a href="mailto:connect@envintglobal.com">connect@envintglobal.com</a></p>

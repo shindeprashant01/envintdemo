@@ -8,7 +8,7 @@ const Better = () => {
   return (
     <div className="better-container">
       <h2>And go for better</h2>
-      <div className="better-stats">
+      <div className="better-stats"> 
         <div className="stat-item">
           <img src={betterImg3} alt="Clients Icon" className="stat-icon" />
           <h3>50+</h3>

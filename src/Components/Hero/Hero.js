@@ -22,7 +22,7 @@ const Hero = () => {
       title: 'Cleaner environment. Engaged communities. Trusted institutions',
       text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
       imgSrc: earth,
-      btnText: 'Connect',
+      btnText: 'Connect', 
     },
     {
       title: 'Our Version of the Future',

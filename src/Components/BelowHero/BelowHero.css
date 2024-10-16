@@ -3,121 +3,136 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 }
+
 .below-hero {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    padding: 2.5rem;
-    /* background-color: #fff; */
-    /* background-color: yellow; */
-    transition: all 0.3s ease;
-    width: 100%;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  transition: all 0.3s ease;
+}
 
+.below-hero:hover .below-hero-image {
+  transform: translateX(40px); /* Move the image to the right on hover */
+}
+
+.below-hero:hover .below-hero-content {
+  transform: translateX(-40px); /* Move the content to the left on hover */
+}
+
+.below-hero-image img {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.below-hero-content {
+  max-width: 50%;
+  padding-left: 3.125rem;
+  transition: transform 0.3s ease;
+}
+
+.below-hero h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: left;
+  margin: 0; /* Prevent extra margin causing overflow */
+}
+
+.below-hero p {
+  font-size: 1.25rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.read-more-btn {
+  background-color: #40c463;
+  color: black;
+  border: none;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  width: 11.375rem;
+  height: 4.063rem;
+  font-size: 1.3rem;
+  transition: width 0.3s ease;
+}
+
+.read-more-btn:hover {
+  width: 13.75rem;
+  color: #e5f7ef;
+}
+
+.read-more-btn::after {
+  content: '→';
+  margin-left: 0.625rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.read-more-btn:hover::after {
+  opacity: 1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .below-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem;
   }
-  
-  .below-hero:hover .below-hero-image {
-    transform: translateX(80px); /* Move the image to the right */
-  }
-  
-  .below-hero:hover .below-hero-content {
-    transform: translateX(-80px); /* Move the content to the left */
-  }
-  
-  .below-hero-image img {
-    width: 100%;
-    max-width: 25rem;
-    height: auto;
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease;
-  }
-  
+
   .below-hero-content {
-    max-width: 50%;
-    padding-left: 3.125rem;
-    transition: transform 0.3s ease;
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 2rem;
+    text-align: center;
   }
-  
+
   .below-hero h2 {
-    font-size: 2rem;
-    color: #333;
-    text-align: left;
+    font-size: 1.75rem;
   }
-  
+
   .below-hero p {
-    font-size: 1.25rem;
-    color: #666;
-    text-align: left;
+    font-size: 1rem;
   }
-  
+
   .read-more-btn {
-    background-color: #40c463;
-    color: black;
-    /* padding: 10px 20px; */
-    border: none;
-    border-radius:1.25rem;
-    cursor: pointer;
-    width: 11.375rem;
-    height: 4.063rem;
-    font-size: 1.3rem;
+    width: 10rem;
+    height: 3.75rem;
   }
 
-  .read-more-btn:hover {
-    width: 13.75rem;
-    color: #e5f7ef;
+  /* Remove hover transform on smaller screens */
+  .below-hero:hover .below-hero-image,
+  .below-hero:hover .below-hero-content {
+    transform: none; /* Disable the translate effect on smaller screens */
   }
-  
-  .read-more-btn::after {
-    content: '→';
-    margin-left: 0.625rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: white;
+}
+
+@media (max-width: 480px) {
+  .below-hero h2 {
+    font-size: 1.5rem;
   }
 
-  .read-more-btn:hover::after {
-    opacity: 1;
+  .below-hero p {
+    font-size: 0.875rem;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .below-hero {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .below-hero-content {
-      max-width: 100%;
-      padding-left: 0;
-      padding-top: 2rem;
-    }
-  
-    .below-hero h2 {
-      font-size: 1.75rem;
-    }
-  
-    .below-hero p {
-      font-size: 1rem;
-    }
-  
-    .read-more-btn {
-      width: 10rem;
-      height: 3.75rem;
-    }
+
+  .read-more-btn {
+    width: 9.375rem;
+    height: 3.125rem;
   }
-  
-  @media (max-width: 480px) {
-    .below-hero h2 {
-      font-size: 1.5rem;
-    }
-  
-    .below-hero p {
-      font-size: 0.875rem;
-    }
-  
-    .read-more-btn {
-      width: 9.375rem;
-      height: 3.125rem;
-    }
+
+  /* Remove hover transform on smaller screens */
+  .below-hero:hover .below-hero-image,
+  .below-hero:hover .below-hero-content {
+    transform: none; /* Disable the translate effect on smaller screens */
   }
-  
+}

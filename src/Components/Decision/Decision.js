@@ -4,7 +4,7 @@ import decisionImg1 from '../assets/img/decisionImg1.png';
 import decisopnImg2 from '../assets/img/decisionImg2.png';
 import decisionImg3 from '../assets/img/decisionImg3.png';
 
-const Decision = () => {
+const Decision = () => { 
   return (
     <div className="decision-container">
       <h2 className="decision-title">In making decisions</h2>
@@ -14,7 +14,7 @@ const Decision = () => {
           <p className="decision-text">Infosys And ESG – A Journey That Started With G</p>
           <div className="decision-content-hover">
             <h3>Infosys And ESG – A Journey That Started With G</h3>
-            <p>On my first site visit to Infosys Mysore campus back in 2011 for a sales call, I was pleasantly surprised that I didn’t realize that I was right next to a sewage treatment plant (STP).</p>
+            <p>On my first site visit to Infosys Mysore campus back in 2011 for a sales call</p>
             <button className="read-more-btn">Read More</button>
           </div>
         </div>
